@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Check_IN::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Check_IN-Debug-fc6f550e78990b43a6d8.json",
+					"jsonFile" : "target-Check_IN-Debug-a6aad24ff65b9413e1ee.json",
 					"name" : "Check_IN",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/rory.hall23/GROUP-5-HOTEL/Check IN/cmake-build-debug",
-		"source" : "C:/Users/rory.hall23/GROUP-5-HOTEL/Check IN"
+		"build" : "C:/Users/roryh/Desktop/MAIN/CS/C code GH/GROUP-5-HOTEL/Check IN/cmake-build-debug",
+		"source" : "C:/Users/roryh/Desktop/MAIN/CS/C code GH/GROUP-5-HOTEL/Check IN"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 4
+		"minor" : 5
 	}
 }
