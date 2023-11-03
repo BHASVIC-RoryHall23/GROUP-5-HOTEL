@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: Check_IN
+# Project: flag
 # Configurations: Debug
 # =============================================================================
 
@@ -41,40 +41,40 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/rory.hall23/GROUP-5-HOTEL/Check$ IN/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target Check_IN
+# Object build statements for EXECUTABLE target flag
 
 
 #############################################
-# Order-only phony target for Check_IN
+# Order-only phony target for flag
 
-build cmake_object_order_depends_target_Check_IN: phony || CMakeFiles/Check_IN.dir
+build cmake_object_order_depends_target_flag: phony || CMakeFiles/flag.dir
 
-build CMakeFiles/Check_IN.dir/main.c.obj: C_COMPILER__Check_IN_Debug C$:/Users/rory.hall23/GROUP-5-HOTEL/Check$ IN/main.c || cmake_object_order_depends_target_Check_IN
-  DEP_FILE = CMakeFiles\Check_IN.dir\main.c.obj.d
+build CMakeFiles/flag.dir/main.c.obj: C_COMPILER__flag_Debug C$:/Users/rory.hall23/GROUP-5-HOTEL/Check$ IN/main.c || cmake_object_order_depends_target_flag
+  DEP_FILE = CMakeFiles\flag.dir\main.c.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu11
-  OBJECT_DIR = CMakeFiles\Check_IN.dir
-  OBJECT_FILE_DIR = CMakeFiles\Check_IN.dir
-  TARGET_COMPILE_PDB = CMakeFiles\Check_IN.dir\
-  TARGET_PDB = Check_IN.pdb
+  OBJECT_DIR = CMakeFiles\flag.dir
+  OBJECT_FILE_DIR = CMakeFiles\flag.dir
+  TARGET_COMPILE_PDB = CMakeFiles\flag.dir\
+  TARGET_PDB = flag.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Check_IN
+# Link build statements for EXECUTABLE target flag
 
 
 #############################################
-# Link the executable Check_IN.exe
+# Link the executable flag.exe
 
-build Check_IN.exe: C_EXECUTABLE_LINKER__Check_IN_Debug CMakeFiles/Check_IN.dir/main.c.obj
+build flag.exe: C_EXECUTABLE_LINKER__flag_Debug CMakeFiles/flag.dir/main.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\Check_IN.dir
+  OBJECT_DIR = CMakeFiles\flag.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Check_IN.dir\
-  TARGET_FILE = Check_IN.exe
-  TARGET_IMPLIB = libCheck_IN.dll.a
-  TARGET_PDB = Check_IN.pdb
+  TARGET_COMPILE_PDB = CMakeFiles\flag.dir\
+  TARGET_FILE = flag.exe
+  TARGET_IMPLIB = libflag.dll.a
+  TARGET_PDB = flag.pdb
 
 
 #############################################
@@ -102,7 +102,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build Check_IN: phony Check_IN.exe
+build flag: phony flag.exe
 
 # =============================================================================
 # Folder targets.
@@ -112,7 +112,7 @@ build Check_IN: phony Check_IN.exe
 #############################################
 # Folder: C:/Users/rory.hall23/GROUP-5-HOTEL/Check IN/cmake-build-debug
 
-build all: phony Check_IN.exe
+build all: phony flag.exe
 
 # =============================================================================
 # Built-in targets

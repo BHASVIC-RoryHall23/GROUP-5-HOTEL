@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Check_IN.exe"
+			"path" : "flag.exe"
 		},
 		{
-			"path" : "Check_IN.pdb"
+			"path" : "flag.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -38,7 +38,10 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu11 -fdiagnostics-color=always"
+					"fragment" : "-g -fdiagnostics-color=always"
+				},
+				{
+					"fragment" : "-std=gnu11"
 				}
 			],
 			"language" : "C",
@@ -56,7 +59,7 @@
 			]
 		}
 	],
-	"id" : "Check_IN::@6890427a1f51a3e7e1df",
+	"id" : "flag::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -76,8 +79,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "Check_IN",
-	"nameOnDisk" : "Check_IN.exe",
+	"name" : "flag",
+	"nameOnDisk" : "flag.exe",
 	"paths" : 
 	{
 		"build" : ".",
