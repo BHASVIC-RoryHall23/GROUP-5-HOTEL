@@ -29,33 +29,33 @@ int main() {
 
         fpt = fopen(FILENAME,"r"); // Opening each file.
 
-        if(fpt==NULL){
+        if(fpt==NULL){ // If its NULL then its open.
 
             room = x+1; // Changing to show that a room is free, making it x to show which room is free.
 
             switch(x+1){ // Printing out the rooms open and their cost.
                 case 1:
-                    printf("Room 1 is open and costs £100./n");
+                    printf("Room 1 is open and costs $100.\n");
                     break;
 
                 case 2:
-                    printf("Room 2 is open and costs £100./n");
+                    printf("Room 2 is open and costs $100.\n");
                     break;
 
                 case 3:
-                    printf("Room 3 is open and costs £85./n");
+                    printf("Room 3 is open and costs $85.\n");
                     break;
 
                 case 4:
-                    printf("Room 4 is open and costs £75./n");
+                    printf("Room 4 is open and costs $75.\n");
                     break;
 
                 case 5:
-                    printf("Room 5 is open and costs £75./n");
+                    printf("Room 5 is open and costs $75.\n");
                     break;
 
                 case 6:
-                    printf("Room 6 is open and costs £50./n");
+                    printf("Room 6 is open and costs $50.\n");
                     break;
 
             }
