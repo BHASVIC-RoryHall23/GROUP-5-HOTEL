@@ -3,38 +3,42 @@
 #include <time.h>
 #include <stdlib.h>
 
+int is_empty_file(FILE *fp);
+
 int main() {
 
 
     FILE *fpt; // File Pointer
     srand(time(NULL)); // Random number
 
-    int NumGuests, BoardType, StayLength, DailyNP, cost, room, RandomNumber,flag;
+    int NumGuests, BoardType, StayLength, DailyNP, room, RandomNumber,flag;
     char Name[30], BookingID[33],FILENAME[9]="Room0.txt", SecondName[20];
 
 
-    /*
+
     // Getting info from client.
     printf("Please input your name:"); scanf("%s",*Name); printf("\n");
     printf("Please input Number of Guests staying:"); scanf("%d",&NumGuests); printf("\n");
     printf("Please input your BoardType (FB, HB, B&B) (1,2,3):"); scanf("%d",&BoardType); printf("\n");
     printf("Please input if you want with Daily NewsPaper, 0 for no, 1 for yes:"); scanf("%d",&DailyNP); printf("\n");
-    */
+
 
     // Checking if rooms are free.
 
     room = -1; // -1 means that no rooms are free.#
     for(int x=0;x<6;x++){
-        FILENAME[4]=x;
-        printf("%s\n",FILENAME); // TEST
 
-        fpt = fopen(FILENAME,"r"); // Opening each file.
 
-        if(fpt==NULL){ // If its NULL then its open.
+        FILENAME[4]='0' + x+1;
+
+        fpt = fopen(FILENAME,"r"); // Opening each fi1le.
+        room = is_empty_file( fpt);
+
+        if(room==1){ // If its 1 then its open.
 
             room = x+1; // Changing to show that a room is free, making it x to show which room is free.
 
-            switch(x+1){ // Printing out the rooms open and their cost.
+            switch(room){ // Printing out the rooms open and their cost.
                 case 1:
                     printf("Room 1 is open and costs $100.\n");
                     break;
@@ -139,8 +143,17 @@ int main() {
             break;
 
     }
+    printf("Done writting!");
 
 
+    return 0;
+}
 
+int is_empty_file(FILE *fp) {
+    int c = getc(fp);
+    if (c == EOF){
+        return 1;
+    }
+    ungetc(c, fp);
     return 0;
 }
