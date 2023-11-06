@@ -26,6 +26,7 @@ int main() {
     room = -1; // -1 means that no rooms are free.#
     for(int x=0;x<6;x++){
         FILENAME[4]=x;
+        printf("%s\n",FILENAME); // TEST
 
         fpt = fopen(FILENAME,"r"); // Opening each file.
 
