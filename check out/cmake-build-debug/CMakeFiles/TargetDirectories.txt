@@ -1,0 +1,3 @@
+C:/BHASVIC/CompSci/Clion/github/hotel kashyyk/GROUP-5-HOTEL/check out/cmake-build-debug/CMakeFiles/check_out.dir
+C:/BHASVIC/CompSci/Clion/github/hotel kashyyk/GROUP-5-HOTEL/check out/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/BHASVIC/CompSci/Clion/github/hotel kashyyk/GROUP-5-HOTEL/check out/cmake-build-debug/CMakeFiles/rebuild_cache.dir
