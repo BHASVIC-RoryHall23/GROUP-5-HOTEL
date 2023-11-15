@@ -8,7 +8,7 @@ int main() {
     FILE *filepointer;
 
     int DayRateA, BoardRateA, room, StayLengthA, Age, NumOfChildrenA, NumGuestsA;
-    char Name[20], NumGuest[20], BoardType[20], StayLength[20], DailyNP[20], ID[20];
+    char Data[100], Name[20], NumGuest[20], BoardType[20], StayLength[20], DailyNP[20], ID[20];
     printf("Please enter your room number: ");
     fflush(stdin);
     scanf("%d", &room);
@@ -44,7 +44,8 @@ int main() {
             break;
     }
 
-
+    fscanf("%s", &Data);
+    
 }
 
 int RoomPrice(int DayRateB, int StayLengthB, int AgeB)
