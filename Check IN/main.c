@@ -20,24 +20,30 @@ int main() {
     printf("Please input your first name:"); scanf("%s",Name);
     printf("Please input your second name:"); scanf("%s",sName);
     printf("Please input Number of Guests staying:"); scanf("%d",&NumGuests);
-    printf("Please input Lenght of stay:"); scanf("%d",&StayLength);
 
     // Validating NumGuests.
+    fflush(stdin);
     while (NumGuests >4 || NumGuests < 1){
-        printf("Four or below please try again:"); scanf("%d",&NumGuests);
+        printf("Four or below please try again:"); scanf("%d",&NumGuests);fflush(stdin);
     }
 
+    printf("Please input Length of stay in days:"); scanf("%d",&StayLength);
+    fflush(stdin);
     printf("Please input your BoardType (FB, HB, B&B) (1,2,3):"); scanf("%d",&BoardType);
 
     // Validating BoardType
+    fflush(stdin);
     while( BoardType != 1 && BoardType != 2 && BoardType != 3 ){
         printf("Please input 1,2,3 For Fullbooking, halfBooking and Bread and breakfast:");scanf("%d",&BoardType);
+        fflush(stdin);
     }
 
     printf("Please input if you want with Daily NewsPaper, 0 for no, 1 for yes:"); scanf("%d",&DailyNP);
 
+    fflush(stdin);
     while( DailyNP != 1 && DailyNP != 0 ){
         printf("Please input 0 or 1 not anything else. Try again:");scanf("%d",&DailyNP);
+        fflush(stdin);
     }
 
     // Checking if rooms are free.

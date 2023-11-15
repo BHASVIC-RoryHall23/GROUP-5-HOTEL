@@ -1,6 +1,6 @@
 Name: Rory
 No. Guests: 2
 BoardType: 1
-StayLength: 10
+StayLength: 1
 Daily Newspaper: 1
-BookingID: Hall2
+BookingID: Hall0
