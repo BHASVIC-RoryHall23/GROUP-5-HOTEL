@@ -6,7 +6,7 @@ int main() {
 
     char bookingID[11] = "1234567890", bookingTest[11];
     int test = 0,fb,hb;
-    char days[20], table[10];
+    char days[20], table[19],booking[20];
     int day, time;
     int i = 0;
 
@@ -16,36 +16,47 @@ int main() {
 
     test = strcmp(bookingTest,bookingID);
 
-    if (test == 0){
+    if (test == 0) {
         printf("\nyour booking ID is valid. continuing...");
 
-        printf("\nwhat day would you like your reservation(dont capitalise)\n");
-        gets(days);
-        fflush(stdin);
-        if(days[0] == 'm'){
+        printf("\nwhat day would you like your reservation\n");
+        fgets(days, sizeof(days), stdin);
+        days[strcspn(days, "\n")] = '\0'; // Remove newline character from input
+
+        if (days[0] == 'm') {
             printf("you want a reservation on Monday");
             day = 1;
-        }else if(days[0]=='t' && days[1] == 'u'){
+            strcpy(booking, "Monday");
+        } else if (days[0] == 't' && days[1] == 'u') {
             printf("you want a reservation on Tuesday");
             day = 2;
-        }else if(days[0]=='w'){
+            strcpy(booking, "Tuesday");
+        } else if (days[0] == 'w') {
             printf("you want a reservation on Wednesday");
             day = 3;
-        }else if(days[0]=='t' && days[1]== 'h'){
+            strcpy(booking, "Wednesday");
+        } else if (days[0] == 't' && days[1] == 'h') {
             printf("you want a reservation on Thursday");
             day = 4;
-        }else if(days[0]=='f'){
+            strcpy(booking, "Thursday");
+        } else if (days[0] == 'f') {
             printf("you want a reservation on Friday");
             day = 5;
-        }else if(days[0]=='s' && days[1]=='a'){
+            strcpy(booking, "Friday");
+        } else if (days[0] == 's' && days[1] == 'a') {
             printf("you want a reservation on Saturday");
             day = 6;
-        }else if(days[0]=='s'&&days[1]=='u'){
+            strcpy(booking, "Saturday");
+        } else if (days[0] == 's' && days[1] == 'u') {
             printf("you want a reservation on Sunday");
             day = 7;
+            strcpy(booking, "Sunday");
+        } else {
+            printf("Invalid day input");
+            return 1; // Exit the program if the day input is invalid
         }
 
-        printf("thank you for selecting a day, what table would you like? \nEndor, Nanaboo, Tatooine ");
+        printf("thank you for selecting a day, what table would you like? \nEndor, Nanaboo, Tatooine \n");
         scanf("%d", &table);
         fflush(stdin);
         if(table[0]== 'e'){
@@ -60,6 +71,18 @@ int main() {
         scanf("%d", &time);
         fflush(stdin);
         printf("you chose %dpm",time);
+
+        if(time != 0 && day != 0 && table != 0){
+            //"you have booked your reservation on %c ", booking[20], table[10], time);
+            printf("you have booked your reservation on ");
+            puts(days);
+            printf("you have chosen table");
+            puts(table);
+            printf("you reservation is at %d pm",time);
+
+
+        }
+
 
     } else if(test > 0){
         printf("your booking ID is Invalid exiting code...");
