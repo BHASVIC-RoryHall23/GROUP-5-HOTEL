@@ -6,13 +6,13 @@ int is_empty_file(FILE *fp);
 int boarding(int board);
 
 int main() {
-
+    setbuf(stdout,NULL);
 
     FILE *fpt; // File Pointer
     srand(time(NULL)); // Random number
 
-    int NumGuests, BoardType, StayLength, DailyNP, room, RandomNumber;
-    char Name[15], sName[15], BookingID[33],FILENAME[9]="Room0.txt";
+    int NumGuests, BoardType, StayLength, DailyNP, room, RandomNumber,BookedRooms[7];
+    char Name[127], sName[127], BookingID[33],FILENAME[10]="Room0.txt";
 
 
 
@@ -22,33 +22,45 @@ int main() {
     printf("Please input Number of Guests staying:"); scanf("%d",&NumGuests);
 
     // Validating NumGuests.
+    fflush(stdin);
     while (NumGuests >4 || NumGuests < 1){
-        printf("Four or below please try again:"); scanf("%d",&NumGuests);
+        printf("Four or below please try again:"); scanf("%d",&NumGuests);fflush(stdin);
     }
 
+    printf("Please input Length of stay in days:"); scanf("%d",&StayLength);
+    fflush(stdin);
     printf("Please input your BoardType (FB, HB, B&B) (1,2,3):"); scanf("%d",&BoardType);
 
     // Validating BoardType
+    fflush(stdin);
     while( BoardType != 1 && BoardType != 2 && BoardType != 3 ){
         printf("Please input 1,2,3 For Fullbooking, halfBooking and Bread and breakfast:");scanf("%d",&BoardType);
+        fflush(stdin);
     }
 
     printf("Please input if you want with Daily NewsPaper, 0 for no, 1 for yes:"); scanf("%d",&DailyNP);
 
+    fflush(stdin);
     while( DailyNP != 1 && DailyNP != 0 ){
         printf("Please input 0 or 1 not anything else. Try again:");scanf("%d",&DailyNP);
+        fflush(stdin);
     }
 
     // Checking if rooms are free.
 
-    room = -1; // -1 means that no rooms are free.#
+    int empty = 1; // -1 means that no rooms are free.#
     for(int x=0;x<6;x++){
 
 
         FILENAME[4]='0' + x+1;
 
         fpt = fopen(FILENAME,"r"); // Opening each fi1le.
+        if (fpt == NULL){
+            printf("oops can't open %s", FILENAME);
+        }
         room = is_empty_file( fpt);
+
+        //printf("Room flag = %d", room);
 
         if(room==1){ // If its 1 then its open.
 
@@ -57,28 +69,36 @@ int main() {
             switch(room){ // Printing out the rooms open and their cost.
                 case 1:
                     printf("Room 1 is open and costs $100.\n");
+                    BookedRooms[0] = 1;empty = 0;
                     break;
 
                 case 2:
                     printf("Room 2 is open and costs $100.\n");
+                    BookedRooms[1] = 1;empty = 0;
                     break;
 
                 case 3:
                     printf("Room 3 is open and costs $85.\n");
+                    BookedRooms[2] = 1;empty = 0;
                     break;
 
                 case 4:
                     printf("Room 4 is open and costs $75.\n");
+                    BookedRooms[3] = 1;empty = 0;
                     break;
 
                 case 5:
                     printf("Room 5 is open and costs $75.\n");
+                    BookedRooms[4] = 1;empty = 0;
                     break;
 
                 case 6:
                     printf("Room 6 is open and costs $50.\n");
+                    BookedRooms[5] = 1;
+                    empty = 0;
                     break;
-
+                default:
+                    printf("ERROR CODE 101");
             }
         }
 
@@ -86,14 +106,20 @@ int main() {
         fclose(fpt);// Closing file.
     }
     // I.e. room =-1 for closed and room = the room number if open.
-    if (room == -1){
+    if (empty == 1){
         printf("Sorry No rooms available!");
+        exit(1);
     }
 
     // Picking a room.
 
     printf("Which room do you want?");
     scanf("%d",&room);
+
+    while(BookedRooms[room-1] != 1){
+        printf("Please input a valid room, That room is booked:");
+        scanf("%d",&room);
+    }
 
 
     // Making Booking ID.
