@@ -1,0 +1,6 @@
+Name: Rory
+No. Guests: 2
+BoardType: 1
+StayLength: 10
+Daily Newspaper: 1
+BookingID: Hall2
