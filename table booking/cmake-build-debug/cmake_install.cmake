@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/yannik.absolom23/OneDrive - BHASVIC/table booking
+# Install script for directory: C:/Users/rory.hall23/GROUP-5-HOTEL/table booking
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/yannik.absolom23/OneDrive - BHASVIC/table booking/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/rory.hall23/GROUP-5-HOTEL/table booking/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
