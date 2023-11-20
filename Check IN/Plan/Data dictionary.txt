@@ -1,0 +1,7 @@
+Name - String
+sName - String
+lengthofstay - Int
+bookingID - String
+Dailyns - Int
+BoardType - Int
+Room - Int

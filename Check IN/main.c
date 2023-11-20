@@ -144,12 +144,12 @@ int main() {
     switch(room){
         case 1:
             fpt = fopen("Room1.txt","w+");
-            fprintf(fpt,"Name: %s\n",Name);
-            fprintf(fpt,"No. Guests: %d\n",NumGuests);
-            fprintf(fpt,"BoardType: %d\n",BoardType);
-            fprintf(fpt,"StayLength: %d\n",StayLength);
-            fprintf(fpt,"Daily Newspaper: %d\n",DailyNP);
-            fprintf(fpt,"BookingID: %s\n",BookingID);
+            fprintf(fpt,"%s\n",Name);
+            fprintf(fpt,"%d\n",NumGuests);
+            fprintf(fpt,"%d\n",BoardType);
+            fprintf(fpt,"%d\n",StayLength);
+            fprintf(fpt,"%d\n",DailyNP);
+            fprintf(fpt,"%s\n",BookingID);
 
             printf("Added to book!");
             fclose(fpt);
@@ -158,13 +158,12 @@ int main() {
         case 2:
             fpt = fopen("Room2.txt","w+");
 
-            fprintf(fpt,"Name: %s\n",Name);
-            fprintf(fpt,"No. Guests: %d\n",NumGuests);
-            fprintf(fpt,"BoardType: %d\n",BoardType);
-            fprintf(fpt,"StayLength: %d\n",StayLength);
-            fprintf(fpt,"Daily Newspaper: %d\n",DailyNP);
-            fprintf(fpt,"BookingID: %s\n",BookingID);
-
+            fprintf(fpt,"%s\n",Name);
+            fprintf(fpt,"%d\n",NumGuests);
+            fprintf(fpt,"%d\n",BoardType);
+            fprintf(fpt,"%d\n",StayLength);
+            fprintf(fpt,"%d\n",DailyNP);
+            fprintf(fpt,"%s\n",BookingID);
             printf("Added to book!");
             fclose(fpt);
             break;
@@ -172,12 +171,12 @@ int main() {
         case 3:
             fpt = fopen("Room3.txt","w+");
 
-            fprintf(fpt,"Name: %s\n",Name);
-            fprintf(fpt,"No. Guests: %d\n",NumGuests);
-            fprintf(fpt,"BoardType: %d\n",BoardType);
-            fprintf(fpt,"StayLength: %d\n",StayLength);
-            fprintf(fpt,"Daily Newspaper: %d\n",DailyNP);
-            fprintf(fpt,"BookingID: %s\n",BookingID);
+            fprintf(fpt,"%s\n",Name);
+            fprintf(fpt,"%d\n",NumGuests);
+            fprintf(fpt,"%d\n",BoardType);
+            fprintf(fpt,"%d\n",StayLength);
+            fprintf(fpt,"%d\n",DailyNP);
+            fprintf(fpt,"%s\n",BookingID);
 
             printf("Added to book!");
             fclose(fpt);
@@ -186,12 +185,12 @@ int main() {
         case 4:
             fpt = fopen("Room4.txt","w+");
 
-            fprintf(fpt,"Name: %s\n",Name);
-            fprintf(fpt,"No. Guests: %d\n",NumGuests);
-            fprintf(fpt,"BoardType: %d\n",BoardType);
-            fprintf(fpt,"StayLength: %d\n",StayLength);
-            fprintf(fpt,"Daily Newspaper: %d\n",DailyNP);
-            fprintf(fpt,"BookingID: %s\n",BookingID);
+            fprintf(fpt,"%s\n",Name);
+            fprintf(fpt,"%d\n",NumGuests);
+            fprintf(fpt,"%d\n",BoardType);
+            fprintf(fpt,"%d\n",StayLength);
+            fprintf(fpt,"%d\n",DailyNP);
+            fprintf(fpt,"%s\n",BookingID);
 
             printf("Added to book!");
             fclose(fpt);
@@ -199,13 +198,12 @@ int main() {
 
         case 5:
             fpt = fopen("Room5.txt","w+");
-
-            fprintf(fpt,"Name: %s\n",Name);
-            fprintf(fpt,"No. Guests: %d\n",NumGuests);
-            fprintf(fpt,"BoardType: %d\n",BoardType);
-            fprintf(fpt,"StayLength: %d\n",StayLength);
-            fprintf(fpt,"Daily Newspaper: %d\n",DailyNP);
-            fprintf(fpt,"BookingID: %s\n",BookingID);
+            fprintf(fpt,"%s\n",Name);
+            fprintf(fpt,"%d\n",NumGuests);
+            fprintf(fpt,"%d\n",BoardType);
+            fprintf(fpt,"%d\n",StayLength);
+            fprintf(fpt,"%d\n",DailyNP);
+            fprintf(fpt,"%s\n",BookingID);
 
             printf("Added to book!");
             fclose(fpt);
@@ -214,12 +212,12 @@ int main() {
         case 6:
             fpt = fopen("Room6.txt","w+");
 
-            fprintf(fpt,"Name: %s\n",Name);
-            fprintf(fpt,"No. Guests: %d\n",NumGuests);
-            fprintf(fpt,"BoardType: %d\n",BoardType);
-            fprintf(fpt,"StayLength: %d\n",StayLength);
-            fprintf(fpt,"Daily Newspaper: %d\n",DailyNP);
-            fprintf(fpt,"BookingID: %s\n",BookingID);
+            fprintf(fpt,"%s\n",Name);
+            fprintf(fpt,"%d\n",NumGuests);
+            fprintf(fpt,"%d\n",BoardType);
+            fprintf(fpt,"%d\n",StayLength);
+            fprintf(fpt,"%d\n",DailyNP);
+            fprintf(fpt,"%s\n",BookingID);
 
             printf("Added to book!");
             fclose(fpt);
