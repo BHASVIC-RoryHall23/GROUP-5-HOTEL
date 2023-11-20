@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main() {
 
@@ -9,7 +10,7 @@ int main() {
     // Check room is taken
     // Take bookingID from roomX.txt
 
-    char bookingID[11], bookingTest[11],days[20], table[19],booking[20],FILENAME[10]="RoomX.txt";
+    char bookingID[30], bookingTest[11],days[20], table[19],booking[20],FILENAME[10]="RoomX.txt";
     int day, time,i = 0,test = 0,fb,hb,room;
 
 
@@ -32,19 +33,13 @@ int main() {
     if (fpt == NULL){
         printf("oops can't open %s", FILENAME);
     }
+    fscanf(fpt,"/n/n/n/n/n%s",&bookingID);
+    test_results=strcmp(bookingTest,bookingID);
+    if(test !=0){
+        printf("Sorry BookingID aren't the same/n%s/n%s",bookingTest,bookingID);
+        exit(1);
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-    test = strcmp(bookingTest,bookingID);
 
     if (test == 0) {
         printf("\nYour booking ID is valid. continuing...");
