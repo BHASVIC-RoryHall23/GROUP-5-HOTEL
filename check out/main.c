@@ -17,50 +17,33 @@ int main() {
     {
         case 1:
             DayRateA = 100;
-            //filepointer = fopen("Room1.txt", "r");
+            //filepointer = fopen("C:\\GROUP-5-HOTEL\Check IN\cmake-build-debug\Room1.txt", "r");
             break;
         case 2:
             DayRateA = 100;
-            //filepointer = fopen("Room2.txt", "r");
+            //filepointer = fopen("C:\\GROUP-5-HOTEL\Check IN\cmake-build-debug\Room2.txt", "r");
             break;
         case 3:
             DayRateA = 85;
-            //filepointer = fopen("Room3.txt", "r");
+            //filepointer = fopen("C:\\GROUP-5-HOTEL\Check IN\cmake-build-debug\Room3.txt", "r");
             break;
         case 4:
             DayRateA = 75;
-            //filepointer = fopen("Room4.txt", "r");
+            //filepointer = fopen("C:\\GROUP-5-HOTEL\Check IN\cmake-build-debug\Room4.txt", "r");
             break;
         case 5:
             DayRateA = 75;
-            //filepointer = fopen("Room5.txt", "r");
+            //filepointer = fopen("C:\\GROUP-5-HOTEL\Check IN\cmake-build-debug\Room5.txt", "r");
             break;
         case 6:
             DayRateA = 50;
-            //filepointer = fopen("Room6.txt", "r");
+            //filepointer = fopen("C:\\GROUP-5-HOTEL\Check IN\cmake-build-debug\Room6.txt", "r");
             break;
         default:
             printf("ERROR");
             break;
     }
-    /*/
-    switch (BoardType)
-    {
-        case BoardType == "FB":
-            BoardRateA = 20;
-            break;
-        case BoardType == "HB":
-            BoardRateA = 15;
-            break;
-        case BoardType == "BB":
-            BoardRateA = 5;
-            break;
-        default:
-            printf("board type not recognised");
-            break;
-    }
-/*/
-    //fscanf("%s", &Data);
+    
     float roomcost = RoomPrice(DayRateA, StayLengthA, Age);
     float boardcost = BoardPrice(BoardRateA, NumGuestsA, NumOfChildrenA, StayLengthA);
 

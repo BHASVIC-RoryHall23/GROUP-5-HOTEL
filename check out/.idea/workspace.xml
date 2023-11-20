@@ -59,11 +59,6 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="check_out" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="check_out" TARGET_NAME="check_out" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="check_out" RUN_TARGET_NAME="check_out">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -79,7 +74,8 @@
       <option name="presentableId" value="Default" />
       <updated>1700039227627</updated>
       <workItem from="1700039231527" duration="3078000" />
-      <workItem from="1700043535885" duration="5872000" />
+      <workItem from="1700043535885" duration="7221000" />
+      <workItem from="1700484979092" duration="1384000" />
     </task>
     <servers />
   </component>
