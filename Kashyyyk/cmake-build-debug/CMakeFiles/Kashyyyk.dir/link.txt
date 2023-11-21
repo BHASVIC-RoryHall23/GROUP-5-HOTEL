@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\JetBrains\CLion 2023.1.5\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\Kashyyyk.dir/objects.a
+C:\PROGRA~2\JETBRA~1\CLION2~1.5\bin\mingw\bin\ar.exe qc CMakeFiles\Kashyyyk.dir/objects.a @CMakeFiles\Kashyyyk.dir\objects1
+C:\PROGRA~2\JETBRA~1\CLION2~1.5\bin\mingw\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\Kashyyyk.dir/objects.a -Wl,--no-whole-archive -o Kashyyyk.exe -Wl,--out-implib,libKashyyyk.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Kashyyyk.dir\linkLibs.rsp

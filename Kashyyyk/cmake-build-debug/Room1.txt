@@ -1,8 +1,8 @@
-Rory
-DOB
+RORY
+01/01/2000
 2
-N. children
 1
-7
-0
-Hall6
+1
+5
+1
+HALL8

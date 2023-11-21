@@ -13,6 +13,8 @@ int CHECK_OUT();
 
 int main() {
 
+    setbuf(stdout,NULL);
+
     int file;
 
     printf("Hello Welcome to KASHYYYK hotel!\n");
@@ -65,6 +67,10 @@ int CHECK_IN() {
     }
 
     printf("Please input Number of Children staying:"); scanf("%d",&NumChildren);
+
+    while(NumChildren>=NumGuests || NumChildren <0){
+        printf("Please input Number of Children staying:"); scanf("%d",&NumChildren);
+    }
 
     printf("Please input Length of stay in days:"); scanf("%d",&StayLength);
     fflush(stdin);
@@ -451,62 +457,98 @@ int CHECK_OUT() {
     FILE *filepointer;
 
     int DayRateA, BoardRateA, room, StayLengthA, Age, NumOfChildrenA, NumGuestsA, DailyNp,BoardingType;
+    char DOB[11],year[5],name[127];
     // BoardingType Is stored as 1,2,3 For fullbook halfbook and bed&breakfast.
 
 
     // Age form DOB
 
-    // Take from file.
-    /*
-     * STAY LENGTH-
-     * N. GUESTS-
-     * DAILY NP-
-     * BOARD TYPE-
-     * Nu. CHildern-
-     * DOB -
-     */
 
 
-    printf("Please enter your room number: ");
+    printf("Please enter your room number: ");    scanf("%d", &room);
     fflush(stdin);
-    scanf("%d", &room);
 
     switch(room)
     {
         case 1:
             DayRateA = 100;
-            filepointer = fopen("C:\\GROUP-5-HOTEL\Check IN\cmake-build-debug\Room1.txt", "r");
-            fscanf(filepointer,"\n,DOB,%d,%d,%d,%d,\n",&NumGuestsA,&BoardingType,&StayLengthA,&DayRateA);
+            filepointer = fopen("Room1.txt", "r");
+            if (filepointer == NULL){
+                printf("oops can't open");
+            }
+            fscanf(filepointer,"%s%s%d%d%d%d%d",&name,&DOB,&NumGuestsA,&NumOfChildrenA,&BoardingType,&StayLengthA,&DailyNp);
+            fclose(filepointer);
+            filepointer = fopen("Room1.txt", "w+");
+            fclose(filepointer);
             break;
         case 2:
             DayRateA = 100;
-            filepointer = fopen("C:\\GROUP-5-HOTEL\Check IN\cmake-build-debug\Room2.txt", "r");
-            fscanf(filepointer,"\n,DOB,%d,%d,%d,%d,\n",&NumGuestsA,&BoardingType,&StayLengthA,&DayRateA);
+            filepointer = fopen("Room2.txt", "r");
+            if (filepointer == NULL){
+                printf("oops can't open");
+            }
+            fscanf(filepointer,"%s%s%d%d%d%d%d",&name,&DOB,&NumGuestsA,&NumOfChildrenA,&BoardingType,&StayLengthA,&DailyNp);
+            fclose(filepointer);
+            filepointer = fopen("Room2.txt", "w+");
+            fclose(filepointer);
             break;
         case 3:
             DayRateA = 85;
-            filepointer = fopen("C:\\GROUP-5-HOTEL\Check IN\cmake-build-debug\Room3.txt", "r");
-            fscanf(filepointer,"\n,DOB,%d,%d,%d,%d,\n",&NumGuestsA,&BoardingType,&StayLengthA,&DayRateA);
+            filepointer = fopen("Room3.txt","r");
+            if (filepointer == NULL){
+                printf("oops can't open");
+            }
+            fscanf(filepointer,"%s%s%d%d%d%d%d",&name,&DOB,&NumGuestsA,&NumOfChildrenA,&BoardingType,&StayLengthA,&DailyNp);
+            fclose(filepointer);
+            filepointer = fopen("Room3.txt", "w+");
+            fclose(filepointer);
             break;
         case 4:
             DayRateA = 75;
-            filepointer = fopen("C:\\GROUP-5-HOTEL\Check IN\cmake-build-debug\Room4.txt", "r");
-            fscanf(filepointer,"\n,DOB,%d,%d,%d,%d,\n",&NumGuestsA,&BoardingType,&StayLengthA,&DayRateA);
+            filepointer = fopen("Room4.txt", "r");
+            if (filepointer == NULL){
+                printf("oops can't open");
+            }
+            fscanf(filepointer,"%s%s%d%d%d%d%d",&name,&DOB,&NumGuestsA,&NumOfChildrenA,&BoardingType,&StayLengthA,&DailyNp);
+            fclose(filepointer);
+            filepointer = fopen("Room4.txt", "w+");
+            fclose(filepointer);
             break;
         case 5:
             DayRateA = 75;
-            filepointer = fopen("C:\\GROUP-5-HOTEL\Check IN\cmake-build-debug\Room5.txt", "r");
-            fscanf(filepointer,"\n,DOB,%d,%d,%d,%d,\n",&NumGuestsA,&BoardingType,&StayLengthA,&DayRateA);
+            filepointer = fopen("Room5.txt", "r");
+            if (filepointer == NULL){
+                printf("oops can't open");
+            }
+            fscanf(filepointer,"%s%s%d%d%d%d%d",&name,&DOB,&NumGuestsA,&NumOfChildrenA,&BoardingType,&StayLengthA,&DailyNp);
+            fclose(filepointer);
+            filepointer = fopen("Room5.txt", "w+");
+            fclose(filepointer);
             break;
         case 6:
             DayRateA = 50;
-            filepointer = fopen("C:\\GROUP-5-HOTEL\Check IN\cmake-build-debug\Room6.txt", "r");
-            fscanf(filepointer,"\n,DOB,%d,%d,%d,%d,\n",&NumGuestsA,&BoardingType,&StayLengthA,&DayRateA);
+            filepointer = fopen("Room6.txt", "r");
+            if (filepointer == NULL){
+                printf("oops can't open");
+            }
+            fscanf(filepointer,"%s%s%d%d%d%d%d",&name,&DOB,&NumGuestsA,&NumOfChildrenA,&BoardingType,&StayLengthA,&DailyNp);
+            fclose(filepointer);
+            filepointer = fopen("Room6.txt", "w+");
+            fclose(filepointer);
             break;
         default:
             printf("ERROR");
             break;
     }
+
+    // WORK OUT AGE FROM DOB
+    for(int x=0;x<5;x++){
+        year[x] = DOB[x+6];
+    }
+    // Now you got a string of the year i.e. 2000
+    Age = 2023-atoi(year);
+
+
 
     float roomcost = RoomPrice(DayRateA, StayLengthA, Age);
     float boardcost = BoardPrice(BoardRateA, NumGuestsA, NumOfChildrenA, StayLengthA);
@@ -521,8 +563,9 @@ int CHECK_OUT() {
     }
     else
     {
-        printf("\nTotal Bill: %.2f", total);
+        printf("\nTotal Bill: %.2f\n", total);
     }
+
 }
 
 int RoomPrice(int DayRateB, int StayLengthB, int AgeB)

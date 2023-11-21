@@ -1,4 +1,4 @@
-"C:\Program Files (x86)\JetBrains\CLion 2023.1.5\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files (x86)/JetBrains/CLion 2023.1.5/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\rory.hall23\GROUP-5-HOTEL\Kashyyyk -B C:\Users\rory.hall23\GROUP-5-HOTEL\Kashyyyk\cmake-build-debug
+"C:\Program Files (x86)\JetBrains\CLion 2023.1.5\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\Users\rory.hall23\GROUP-5-HOTEL\Kashyyyk -B C:\Users\rory.hall23\GROUP-5-HOTEL\Kashyyyk\cmake-build-debug
 -- The C compiler identification is GNU 11.2.0
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
