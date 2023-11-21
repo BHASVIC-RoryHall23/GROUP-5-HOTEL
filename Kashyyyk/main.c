@@ -328,7 +328,7 @@ int TABLE() {
     // Check room is taken
     // Take bookingID from roomX.txt
 
-    char bookingID[30], bookingTest[11],days[20], table[19],booking[20],FILENAME[10]="RoomX.txt";
+    char bookingID[30], bookingTest[11],days[20], table[19],booking[20],FILENAME[10]="RoomX.txt",flag[127];
     int day, time,i = 0,test = 0,fb,hb,room;
 
 
@@ -341,8 +341,7 @@ int TABLE() {
     }
 
 
-    printf("Please enter your booking ID:\n");
-    gets(bookingTest);
+    printf("Please enter your booking ID:"); scanf("%s",&bookingTest);
     fflush(stdin);
 
     FILENAME[4]='0' + room;
@@ -352,7 +351,7 @@ int TABLE() {
         printf("oops can't open %s", FILENAME);
     }
     // Name, DOB, N. guests, N. Children, BOARDTYPE, Stay length, Dailynp, BoardID
-    fscanf(fpt,"\n\n\n\n\n\n\n%s",&bookingID);  // <----- CHANGE THIS
+    fscanf(fpt,"%s%s%s%s%s%s%s%s",&flag,&flag,&flag,&flag,&flag,&flag,&flag,&bookingID);  // <----- CHANGE THIS
     test=strcmp(bookingTest,bookingID);
 
     if(test !=0){
@@ -413,7 +412,7 @@ int TABLE() {
 
         } else {
 
-            printf("Invalid day input");
+            printf("Invalid day input\n");
             return 1; // Exit the program if the day input is invalid
         }
 
