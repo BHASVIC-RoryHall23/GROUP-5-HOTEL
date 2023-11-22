@@ -23,6 +23,15 @@ int main() {
         printf("\nWhat do you want to do?");
         printf("\n(1) For Check In.\n(2) For Table Booking.\n(3) For Check Out!\nENTER 0 FOR QUIT.\n");
         scanf("%d",&file);
+        fflush(stdin);
+
+        while(file <1 || file >3){
+            printf("\n(1) For Check In.\n(2) For Table Booking.\n(3) For Check Out!\nENTER 0 FOR QUIT.\n");
+            scanf("%d",&file);
+            fflush(stdin);
+        }
+
+
 
         if(file == 1){
             CHECK_IN();
@@ -50,7 +59,7 @@ int CHECK_IN() {
     srand(time(NULL)); // Random number
 
     int NumGuests, BoardType, StayLength, DailyNP, room, RandomNumber,BookedRooms[7],NumChildren;
-    char Name[127], sName[127], BookingID[33],FILENAME[10]="Room0.txt",DOB[11];
+    char Name[127], sName[127], BookingID[33],FILENAME[10]="Room0.txt",DOB[20];
 
 
 
@@ -58,6 +67,14 @@ int CHECK_IN() {
     printf("Please input your first name:"); scanf("%s",Name);
     printf("Please input your second name:"); scanf("%s",sName);
     printf("Please enter your Data of Birth in the form xx/xx/xxxx:"); scanf("%s",DOB);
+
+    fflush(stdin);
+
+    while(strlen(DOB) != 10 || DOB[2] != '/' ){
+        printf("Please enter your Data of Birth in the form xx/xx/xxxx:"); scanf("%s",DOB);
+        fflush(stdin);
+    }
+
     printf("Please input Number of Guests staying:"); scanf("%d",&NumGuests);
 
     // Validating NumGuests.
