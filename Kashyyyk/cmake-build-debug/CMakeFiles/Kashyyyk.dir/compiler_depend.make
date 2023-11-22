@@ -29,7 +29,8 @@ CMakeFiles/Kashyyyk.dir/main.c.obj: C:/Users/rory.hall23/GROUP-5-HOTEL/Kashyyyk/
   C:/Program\ Files\ (x86)/JetBrains/CLion\ 2023.1.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/mm_malloc.h \
   C:/Program\ Files\ (x86)/JetBrains/CLion\ 2023.1.5/bin/mingw/x86_64-w64-mingw32/include/errno.h \
   C:/Program\ Files\ (x86)/JetBrains/CLion\ 2023.1.5/bin/mingw/x86_64-w64-mingw32/include/string.h \
-  C:/Program\ Files\ (x86)/JetBrains/CLion\ 2023.1.5/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h
+  C:/Program\ Files\ (x86)/JetBrains/CLion\ 2023.1.5/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
+  C:/Program\ Files\ (x86)/JetBrains/CLion\ 2023.1.5/bin/mingw/x86_64-w64-mingw32/include/ctype.h
 
 
 C:/Users/rory.hall23/GROUP-5-HOTEL/Kashyyyk/main.c:
@@ -89,3 +90,5 @@ C:/Program\ Files\ (x86)/JetBrains/CLion\ 2023.1.5/bin/mingw/x86_64-w64-mingw32/
 C:/Program\ Files\ (x86)/JetBrains/CLion\ 2023.1.5/bin/mingw/x86_64-w64-mingw32/include/errno.h:
 
 C:/Program\ Files\ (x86)/JetBrains/CLion\ 2023.1.5/bin/mingw/x86_64-w64-mingw32/include/string.h:
+
+C:/Program\ Files\ (x86)/JetBrains/CLion\ 2023.1.5/bin/mingw/x86_64-w64-mingw32/include/ctype.h:

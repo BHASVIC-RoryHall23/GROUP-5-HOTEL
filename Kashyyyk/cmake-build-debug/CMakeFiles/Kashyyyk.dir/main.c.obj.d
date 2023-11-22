@@ -27,4 +27,5 @@ CMakeFiles/Kashyyyk.dir/main.c.obj: \
  C:/PROGRA~2/JETBRA~1/CLION2~1.5/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/mm_malloc.h \
  C:/PROGRA~2/JETBRA~1/CLION2~1.5/bin/mingw/x86_64-w64-mingw32/include/errno.h \
  C:/PROGRA~2/JETBRA~1/CLION2~1.5/bin/mingw/x86_64-w64-mingw32/include/string.h \
- C:/PROGRA~2/JETBRA~1/CLION2~1.5/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h
+ C:/PROGRA~2/JETBRA~1/CLION2~1.5/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ C:/PROGRA~2/JETBRA~1/CLION2~1.5/bin/mingw/x86_64-w64-mingw32/include/ctype.h

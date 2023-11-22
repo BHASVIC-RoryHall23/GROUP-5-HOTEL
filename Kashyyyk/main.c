@@ -2,9 +2,9 @@
 #include <time.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 int is_empty_file(FILE *fp);
-int boarding(int board);
 int RoomPrice (int DayRateB, int StayLengthB, int AgeB);
 int BoardPrice (int BoardRateB,int NumGuestsB, int NumOfChildrenB, int StayLengthB);
 int CHECK_IN();
@@ -20,7 +20,7 @@ int main() {
     printf("Hello Welcome to KASHYYYK hotel!\n");
 
     while (free){
-        printf("What do you want to do?");
+        printf("\nWhat do you want to do?");
         printf("\n(1) For Check In.\n(2) For Table Booking.\n(3) For Check Out!\nENTER 0 FOR QUIT.\n");
         scanf("%d",&file);
 
@@ -153,7 +153,7 @@ int CHECK_IN() {
     // I.e. room =-1 for closed and room = the room number if open.
     if (empty == 1){
         printf("Sorry No rooms available!");
-        exit(1);
+        return 0;
     }
 
     // Picking a room.
@@ -284,7 +284,7 @@ int CHECK_IN() {
     }
     // printf("Done writing!");
 
-
+    printf("Your BookingID is %s",BookingID);
     return 0;
 }
 
@@ -297,29 +297,6 @@ int is_empty_file(FILE *fp) {
     return 0;
 }
 
-int boarding(int board){
-    char x[3];
-    if(board == 1){
-        x[0] = 'F';
-        x[1] = 'B';
-        return *x;
-    }
-    else if(board == 2){
-        x[0] = 'H';
-        x[1] = 'B';
-        return *x;
-    }
-    else if(board == 3){
-        x[0] = 'B';
-        x[1] = 'B';
-        return *x;
-    }
-    else{
-        printf("ERROR - B_TYPE");
-        return 0;
-    }
-}
-
 int TABLE() {
 
     setbuf(stdout,NULL);
@@ -328,7 +305,7 @@ int TABLE() {
     // Check room is taken
     // Take bookingID from roomX.txt
 
-    char bookingID[30], bookingTest[11],days[20], table[19],booking[20],FILENAME[10]="RoomX.txt",flag[127];
+    char bookingID[30], bookingTest[30],days[20], table[19],booking[20],FILENAME[10]="RoomX.txt",flag[127];
     int day, time,i = 0,test = 0,fb,hb,room;
 
 
@@ -341,7 +318,8 @@ int TABLE() {
     }
 
 
-    printf("Please enter your booking ID:"); scanf("%s",&bookingTest);
+    printf("Please enter your booking ID:");
+    scanf("%s",bookingTest);
     fflush(stdin);
 
     FILENAME[4]='0' + room;
@@ -351,62 +329,63 @@ int TABLE() {
         printf("oops can't open %s", FILENAME);
     }
     // Name, DOB, N. guests, N. Children, BOARDTYPE, Stay length, Dailynp, BoardID
-    fscanf(fpt,"%s%s%s%s%s%s%s%s",&flag,&flag,&flag,&flag,&flag,&flag,&flag,&bookingID);  // <----- CHANGE THIS
+    fscanf(fpt,"%s%s%s%s%s%s%s%s",flag,flag,flag,flag,flag,flag,flag,bookingID);
     test=strcmp(bookingTest,bookingID);
 
     if(test !=0){
-        printf("Sorry BookingID aren't the same/n%s/n%s",bookingTest,bookingID);
-        exit(1);
+        printf("Sorry BookingID aren't the same\n%s\n%s",bookingTest,bookingID);
+        return 0;
     }
 
 
     if (test == 0) {
         printf("\nYour booking ID is valid. continuing...");
 
-        printf("\nwhat day would you like your reservation\n");
+        printf("\nwhat day would you like your reservation.\n");
         fgets(days, sizeof(days), stdin);
         days[strcspn(days, "\n")] = '\0';
         // Remove newline character from input
 
-        if (days[0] == 'm') {
+        days[0] = tolower(days[0]);
 
-            printf("you want a reservation on Monday");
+        if (days[0] == 'm') {
+            printf("You want a reservation on Monday");
             day = 1;
             strcpy(booking, "Monday");
 
         } else if (days[0] == 't' && days[1] == 'u') {
 
-            printf("you want a reservation on Tuesday");
+            printf("You want a reservation on Tuesday");
             day = 2;
             strcpy(booking, "Tuesday");
 
         } else if (days[0] == 'w') {
 
-            printf("you want a reservation on Wednesday");
+            printf("You want a reservation on Wednesday");
             day = 3;
             strcpy(booking, "Wednesday");
 
         } else if (days[0] == 't' && days[1] == 'h') {
 
-            printf("you want a reservation on Thursday");
+            printf("You want a reservation on Thursday");
             day = 4;
             strcpy(booking, "Thursday");
 
         } else if (days[0] == 'f') {
 
-            printf("you want a reservation on Friday");
+            printf("You want a reservation on Friday");
             day = 5;
             strcpy(booking, "Friday");
 
         } else if (days[0] == 's' && days[1] == 'a') {
 
-            printf("you want a reservation on Saturday");
+            printf("You want a reservation on Saturday");
             day = 6;
             strcpy(booking, "Saturday");
 
         } else if (days[0] == 's' && days[1] == 'u') {
 
-            printf("you want a reservation on Sunday");
+            printf("You want a reservation on Sunday");
             day = 7;
             strcpy(booking, "Sunday");
 
@@ -416,29 +395,29 @@ int TABLE() {
             return 1; // Exit the program if the day input is invalid
         }
 
-        printf("thank you for selecting a day, what table would you like? \nEndor, Nanaboo, Tatooine \n");
+        printf("\nThank you for selecting a day, what table would you like? \nEndor, Nanaboo, Tatooine \n");
         scanf("%d", &table);
         fflush(stdin);
         if(table[0]== 'e'){
-            printf("you chose table Endor");
-        }else if(table[0] == "n"){
-            printf("you chose table Naboo");
-        }else if(table[0]== "t"){
-            printf("you chose table Tatooine");
+            printf("You chose table Endor");
+        }else if("n" == table[0]){
+            printf("You chose table Naboo");
+        }else if("t" == table[0]){
+            printf("You chose table Tatooine");
         }
 
-        printf("finally what time would you like for the reservation? 7pm or 9pm\n");
+        printf("Finally what time would you like for the reservation? 7pm or 9pm\n");
         scanf("%d", &time);
         fflush(stdin);
         printf("you chose %dpm",time);
 
         if(time != 0 && day != 0 && table != 0){
             //"you have booked your reservation on %c ", booking[20], table[10], time);
-            printf("you have booked your reservation on ");
+            printf("You have booked your reservation on ");
             puts(days);
-            printf("you have chosen table");
+            printf("You have chosen table");
             puts(table);
-            printf("you reservation is at %d pm",time);
+            printf("You reservation is at %d pm",time);
 
 
         }
